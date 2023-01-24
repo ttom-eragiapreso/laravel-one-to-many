@@ -27,6 +27,21 @@
             id="uploaded_image">
         </div>
       @endif
+
+      {{-- Type select --}}
+      {{-- Types Select --}}
+      <div class="mb-3">
+        <select name="type_id" id="types" class="form-select">
+          <option value="">Select an option</option>
+          @foreach ($types as $type)
+            <option @if ($type->id == old('type_id', $project->type?->id)) selected @endif value="{{ $type->id }}">
+              {{ $type->name }}</option>
+          @endforeach
+        </select>
+      </div>
+
+
+
       {{-- Project client name --}}
       <div class="mb-3">
         <label for="client_name" class="form-label fw-bold">Project Client Name</label>

@@ -14,7 +14,7 @@
           <div class="card-body">
             <h6 class="card-title">{{ $project->original_cover_image_name }}</h6>
             <h5 class="card-title">{{ $project->name }}</h5>
-            <h5 class="card-title">{{ $project->type->name }}</h5>
+            <h5 class="card-title">Type: {{ $project->type?->name }}</h5>
             <h5 class="card-title">{{ $project->client_name }}</h5>
             <p class="card-text">{{ $project->summary }}</p>
             <div class="actions d-flex">
